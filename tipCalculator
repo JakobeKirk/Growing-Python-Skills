@@ -1,0 +1,15 @@
+#Python Tip Calculator
+#Created from a course on Udemy by Angela from app brewery 
+# I solved the challenge and added {:.2f} with her help where I used round(blah,2) instead
+
+print("Welcome to the tip calculator!")
+billTotal = input("What was the total bill? $")
+billTotal = float(billTotal)
+tipPercent = input("How much tip would you like to give? 10, 12, or 15? ")
+tipPercent = float(tipPercent)
+tipPercent = tipPercent / 100 + 1
+peoplePaying = input("How many people to split the bill?")
+peoplePaying = float(peoplePaying)
+payPerPerson = f"{(billTotal * tipPercent) / peoplePaying}"
+payPerPerson = "{:.2f}".format(float(payPerPerson))
+print(f"Each person should pay: ${payPerPerson}")
